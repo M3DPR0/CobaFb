@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
-br.addheaders = [('User-Agent', 'Browser Mozilla/5.0 (Linux; Android 8.0.0; SM-A600G Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36 (FBAN/FB4A;FBAV/235.0.0.38.118;FBBV/168314978;FBDM/{density=2.0,width=720,height=1384};FBLC/id_ID;FBRV/0;FB_FW/2;FBCR/TELKOMSEL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-A600G;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;')]
+br.addheaders = [('User-Agent', 'Browser Mozilla/5.0 (Linux; Android 8.0.0; SM-A600G Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36')]
 
 def keluar():
     print '\x1b[1;91m[!] Tutup'
