@@ -1,11 +1,7 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
+
 import os, sys, time, datetime, random, hashlib, re, threading, json, getpass, urllib, requests, mechanize
 from multiprocessing.pool import ThreadPool
-
-
-
-
-
 try:
     import mechanize
 except ImportError:
@@ -16,10 +12,6 @@ else:
     except ImportError:
         os.system('pip2 install requests')
 
-
-
-
-
 from requests.exceptions import ConnectionError
 from mechanize import Browser
 reload(sys)
@@ -29,43 +21,18 @@ br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
 br.addheaders = [('User-Agent', 'Browser Mozilla/5.0 (Linux; Android 8.0.0; SM-A600G Build/R16NW; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/66.0.3359.126 Mobile Safari/537.36 (FBAN/FB4A;FBAV/235.0.0.38.118;FBBV/168314978;FBDM/{density=2.0,width=720,height=1384};FBLC/id_ID;FBRV/0;FB_FW/2;FBCR/TELKOMSEL;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-A600G;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;')]
 
-
-
-
-
-
-
-
-
 def keluar():
     print '\x1b[1;91m[!] Tutup'
     os.sys.exit()
 
 
 def jalan(z):
-
-
-
-
     for e in z + '\n':
         sys.stdout.write(e)
         sys.stdout.flush()
         time.sleep(0.01)
 
-logo = 
-"\x1b[1;97m█████████
-\n \x1b[1;97m█▄█████▄█         \x1b[1;97m●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●\n 
-\x1b[1;97m█ \x1b[1;96m▼▼▼▼▼  \x1b[1;97m- _ --_-- \x1b[1;92m╔╦╗┌─┐┬─┐┬┌─   ╔═╗╔╗ 
-\n \x1b[1;92m█  \x1b[1;97m  \x1b[1;97m_-_-- -_ --__ \x1b[1;97m ║║├─┤├┬┘├┴┐───╠╣ ╠╩╗\n 
-\x1b[1;97m█ \x1b[1;97m▲▲▲▲▲ \x1b[1;97m--  - _ -- \x1b[1;97m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝  \x1b[1;93mPremium\n \x1b[1;92m█████████         \x1b[1;97m«==========✧==========»
-\n \x1b[1;92m ██ ██\n 
-\x1b[1;97m╔════════════════════════════════════════════════╗\n 
-\x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mReCode   \x1b[1;91m:  \x1b[1;96m Mr•Tims   \x1b[1;97m                   ║
-\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mGitHub   \x1b[1;91m:  \x1b[1;92m \x1b[92mhttps://github.com/rtmyourbaee    \x1b[    \x1b[1;97m ║\n 
-\x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mFB       \x1b[1;91m:   \x1b[1;92\x1b[92mfb.me/Rtmyourbaee\x1b[     \x1b[1;97m  ║   \n
-\x1b[1;97m╚════════════════════════════════════════════════╝"  
-
-'\n\x1b[1;92m[*] Hubungi saya di WA : 081617772813 \n'
+logo = "\x1b[1;97m█████████\n \x1b[1;97m█▄█████▄█         \x1b[1;97m●▬▬▬▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬▬▬●\n \x1b[1;97m█ \x1b[1;96m▼▼▼▼▼  \x1b[1;97m- _ --_-- \x1b[1;92m╔╦╗┌─┐┬─┐┬┌─   ╔═╗╔╗ \n \x1b[1;92m█  \x1b[1;97m  \x1b[1;97m_-_-- -_ --__ \x1b[1;97m ║║├─┤├┬┘├┴┐───╠╣ ╠╩╗\n \x1b[1;97m█ \x1b[1;97m▲▲▲▲▲ \x1b[1;97m--  - _ -- \x1b[1;97m═╩╝┴ ┴┴└─┴ ┴   ╚  ╚═╝  \x1b[1;93mPremium\n \x1b[1;92m█████████         \x1b[1;97m«==========✧==========»\n \x1b[1;92m ██ ██\n \x1b[1;97m╔════════════════════════════════════════════════╗\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mReCode   \x1b[1;91m:  \x1b[1;96m Mr•Tims   \x1b[1;97m                   ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mGitHub   \x1b[1;91m:  \x1b[1;92m \x1b[92mhttps://github.com/rtmyourbaee    \x1b[    \x1b[1;97m ║\n \x1b[1;97m║ \x1b[1;93m*  \x1b[1;97mFB       \x1b[1;91m:   \x1b[1;92\x1b[92mfb.me/Rtmyourbaee\x1b[     \x1b[1;97m  ║   \n \x1b[1;97m╚════════════════════════════════════════════════╝"  '\n\x1b[1;92m[*] Jangan Lupa Follow Ig : rtmyourbaee_ Contack WA : 081218655172 \n'
 
 def tik():
     titik = [
@@ -74,25 +41,6 @@ def tik():
         print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mOrang Sabar Di Sayang Allah \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(0.01)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 back = 0
@@ -333,17 +281,6 @@ def informasi():
         menu()
 
 
-
-
-
-
-
-
-
-
-
-
-
 def menu_hack():
     os.system('clear')
     try:
@@ -366,11 +303,6 @@ def menu_hack():
     print '║-> \x1b[1;31;40m0. Back'
     print '\x1b[1;37;40m║'
     hack_pilih()
-
-
-
-
-
 
 
 def hack_pilih():
@@ -542,25 +474,6 @@ def mini():
             menu_hack()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def crack():
     global file
     global idlist
@@ -650,26 +563,6 @@ def hasil():
     print
     print '\x1b[31m[x] Failed \x1b[1;97m--> ' + str(len(gagal))
     keluar()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def super():
@@ -913,24 +806,6 @@ def tanyaw():
                         tanyaw()
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 def menu_yahoo():
     os.system('clear')
     try:
@@ -1033,16 +908,6 @@ def yahoofriends():
     menu_yahoo()
 
 
-
-
-
-
-
-
-
-
-
-
 def yahoolist():
     os.system('clear')
     try:
@@ -1103,35 +968,6 @@ def yahoolist():
     save.close()
     raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
     menu_yahoo()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 def grab():
@@ -1244,13 +1080,6 @@ def id_friends():
             keluar()
 
 
-
-
-
-
-
-ID DARI TEMAN
-
 def idfrom_friends():
     os.system('clear')
     try:
@@ -1304,16 +1133,6 @@ def idfrom_friends():
         except requests.exceptions.ConnectionError:
             print '\x1b[1;91m[\xe2\x9c\x96] No connection'
             keluar()
-
-
-
-
-
-
-
-
-
-ID MEMBER GROUP
 
 
 def id_member_grup():
@@ -1666,11 +1485,6 @@ def bot_pilih():
                                         bot_pilih()
 
 
-
-
-
-BOT REACTION AUTO
-
 def menu_react():
     os.system('clear')
     try:
@@ -1831,7 +1645,6 @@ def reactg_pilih():
                                     reactg_pilih()
 
 
-
 def reactg():
     os.system('clear')
     try:
@@ -1871,11 +1684,6 @@ def reactg():
             menu_bot()
 
 
-
-
-
-BOT KOMEN TEMAN
-
 def bot_komen():
     os.system('clear')
     try:
@@ -1914,13 +1722,6 @@ def bot_komen():
             raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
             menu_bot()
 
-
-
-
-
-
-
-BOT KOMEN GROUP
 
 def grup_komen():
     os.system('clear')
@@ -1964,12 +1765,6 @@ def grup_komen():
             menu_bot()
 
 
-
-
-
-
-BOT DELETE POST
-
 def deletepost():
     os.system('clear')
     try:
@@ -2012,11 +1807,6 @@ def deletepost():
     menu_bot()
 
 
-
-
-
-BOT AUTO ACCEPT TEMAN
-
 def accept():
     os.system('clear')
     try:
@@ -2056,10 +1846,6 @@ def accept():
     menu_bot()
 
 
-
-
-BOT AUTO DELETE TEMAN
-
 def unfriend():
     os.system('clear')
     try:
@@ -2098,13 +1884,6 @@ def unfriend():
     menu_bot()
 
 
-
-
-
-
-
-BOT LAINNYA
-
 def lain():
     os.system('clear')
     try:
@@ -2126,6 +1905,7 @@ def lain():
     print '║-> \x1b[1;31;40m0. Back'
     print '\x1b[1;37;40m║'
     pilih_lain()
+
 
 def pilih_lain():
     other = raw_input('╚═\x1b[1;91m▶\x1b[1;97m ')
@@ -2155,11 +1935,6 @@ def pilih_lain():
                                 pilih_lain()
 
 
-
-
-
-
-
 def status():
     os.system('clear')
     try:
@@ -2186,16 +1961,6 @@ def status():
         print '\x1b[1;91m[+] \x1b[1;92mStatus ID\x1b[1;91m : \x1b[1;97m' + op['id']
         raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
         lain()
-
-
-
-
-
-
-
-
-
-
 
 
 def wordlist():
@@ -2313,14 +2078,6 @@ def check_akun():
     lain()
 
 
-
-
-
-
-
-
-
-
 def grupsaya():
     os.system('clear')
     try:
@@ -2372,12 +2129,6 @@ def grupsaya():
             lain()
 
 
-
-
-
-
-
-
 def guard():
     global toket
     os.system('clear')
@@ -2413,11 +2164,13 @@ def guard():
                 else:
                     keluar()
 
+
 def get_userid(toket):
     url = 'https://graph.facebook.com/me?access_token=%s' % toket
     res = requests.get(url)
     uid = json.loads(res.text)
     return uid['id']
+
 
 def gaz(toket, enable=True):
     id = get_userid(toket)
@@ -2448,3 +2201,4 @@ def gaz(toket, enable=True):
 
 if __name__ == '__main__':
 	login()
+
