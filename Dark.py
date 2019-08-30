@@ -19,7 +19,7 @@ sys.setdefaultencoding('utf8')
 br = mechanize.Browser()
 br.set_handle_robots(False)
 br.set_handle_refresh(mechanize._http.HTTPRefreshProcessor(), max_time=1)
-br.addheaders = [('User-Agent', '(Android; Chrome/66.0.3359.126 ; U; id) Mobile Safari/537.36 Version/4.0')]
+br.addheaders = [('User-Agent', 'Opera/9.80 (Android; Opera Mini/43.2.2254/140.293; U; id) Presto/2.12.423 Version/12.16')]
 def keluar():
     print '\x1b[1;91m[!] Tutup'
     os.sys.exit()
@@ -37,7 +37,7 @@ def tik():
     titik = [
      '.   ', '..  ', '... ']
     for o in titik:
-        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mOrang Sabar Di Sayang Allah \x1b[1;97m' + o,
+        print '\r\x1b[1;91m[\xe2\x97\x8f] \x1b[1;92mTunggu beberapa detik... \x1b[1;97m' + o,
         sys.stdout.flush()
         time.sleep(0.01)
 
